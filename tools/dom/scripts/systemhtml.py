@@ -2024,7 +2024,9 @@ class Dart2JSBackend(HtmlDartGenerator):
                                                                                 -
                                                                                 1]
                     else:
-                        print "ERROR: Arguments exceede 20 - please fix Python code to handle more."
+                        print(
+                            "ERROR: Arguments exceede 20 - please fix Python code to handle more."
+                        )
                 self._members_emitter.Emit(
                     '  $RENAME$METADATA$MODIFIERS$TYPE$TARGET($PARAMS) =>\n'
                     '      promiseToFuture(JS("", "#.$JSNAME($HASH_STR)", this$CALLING_PARAMS));\n',

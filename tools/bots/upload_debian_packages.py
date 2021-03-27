@@ -44,4 +44,4 @@ if __name__ == '__main__':
         tarfile = os.path.join(builddir, tarfilename)
         ArchiveArtifacts(tarfile, builddir, channel)
     else:
-        print 'Not uploading artifacts on bleeding edge'
+        print('Not uploading artifacts on bleeding edge')

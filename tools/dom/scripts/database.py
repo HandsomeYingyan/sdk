@@ -306,7 +306,7 @@ class Database(object):
         if type_def_name in self._all_type_defs:
             raise RuntimeError('Typedef %s already exists' % type_def_name)
         self._all_type_defs[type_def_name] = type_def
-        print '  Added typedef %s' % type_def_name
+        print('  Added typedef %s' % type_def_name)
 
     def TransitiveSecondaryParents(self, interface, propagate_event_target):
         """Returns a list of all non-primary parents.

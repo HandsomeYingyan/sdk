@@ -937,7 +937,7 @@ class OperationInfo(object):
 
 def ConstantOutputOrder(a, b):
     """Canonical output ordering for constants."""
-    return cmp(a.id, b.id)
+    return (a.id > b.id) - (a.id < b.id)
 
 
 def _FormatNameList(names):
@@ -2098,7 +2098,8 @@ class TypeRegistry(object):
                 # It's a typedef (implied union)
                 return self.TypeInfo('any')
             else:
-                print "ERROR: Unexpected interface, or type not found. %s" % type_name
+                print("ERROR: Unexpected interface, or type not found. %s" %
+                      type_name)
 
             if 'Callback' in interface.ext_attrs:
                 return CallbackIDLTypeInfo(

@@ -172,14 +172,14 @@ def start_test_server(port, build_directory):
 
 
 def call(args):
-    print ' '.join(args)
+    print(' '.join(args))
     pipe = subprocess.Popen(
         args, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     output, error = pipe.communicate()
     if output:
-        print output
+        print(output)
     if error:
-        print error
+        print(error)
     return pipe.returncode
 
 

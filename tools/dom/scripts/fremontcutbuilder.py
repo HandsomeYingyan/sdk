@@ -155,7 +155,7 @@ def build_database(idl_files,
                         sorted(unknown_conditionals))
         _logger.warning('Please update fremontcutbuilder.py')
 
-    print 'Merging interfaces %s seconds' % round(time.time() - start_time, 2)
+    print('Merging interfaces %s seconds' % round(time.time() - start_time, 2))
 
     return db
 

@@ -760,8 +760,9 @@ class HtmlDartGenerator(object):
                 if not (param_list.endswith(', mapArg') or
                         param_list.endswith(', options') or
                         param_list == mapArg):
-                    print "ERROR: %s.%s - Last parameter or only parameter %s is not of type Map" % (
-                        self._interface.id, html_name, mapArg)
+                    print(
+                        "ERROR: %s.%s - Last parameter or only parameter %s is not of type Map"
+                        % (self._interface.id, html_name, mapArg))
                 param_list = '%s_dict' % param_list
 
                 if mapArgOptional:
